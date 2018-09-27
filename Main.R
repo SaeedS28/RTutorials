@@ -41,4 +41,4 @@ BMI <- data.frame( #row names are headers.
 #names, nrow, ncol, length are methods called on daa frame
 print(BMI) 
 print(BMI[1,2]) #Like a matrix
-print(BMI[1:2,]) #gets 1st and 2nd rows
+print(BMI[c(1:2),]) #gets 1st and 2nd rows
