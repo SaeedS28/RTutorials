@@ -1,23 +1,7 @@
 # Comments in R
 
-# ----- SCATTERPLOTS -----
-# Load player data
-mlbPlayers = read.table(file=file.choose(),
-                        header=T, sep=" ",
-                        na.strings="`",
-                        stringsAsFactors=F)
+n <- floor(rnorm(10000, 500, 100)) #Generate 100000 numbers with a mean of 500 and a stdev of 100. Floored after.
 
-# Grab just RBIs and Avg for each player
-# playerData is known as a data frame (Table of Data)
-# We get the stats we want by passing that list in a vector
-playerData = mlbPlayers[,c("RBI","AVG")]
+t <- table(n) #counts the frequency of each number in t
 
-# Create the file
-png(file="player_rbi_avg.png")
-
-# Create the plot
-plot(x=playerData$RBI, y=playerData$AVG,
-     xlab="RBI", ylab="AVG", main="RBIs and Average")
-
-# Create the file
-dev.off()
+barplot(table(floor(rnorm(10000, 500, 100))), xlab="Numbers", ylab="Frequencies")
