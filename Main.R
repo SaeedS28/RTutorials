@@ -16,7 +16,18 @@ list1 <- list(c(123,456,789), 123.2,sin)
 print(list1[2])
 print(list1[[1]][2]) #2nd element of the first vector
 
-#Matrix
+#Matrix (2D)
 M <-matrix(c('a','a','b','c','b','a'),nrow=2, ncol=3,byrow=TRUE) #byrow places data based on rows or cols. True for rows, False for cols
 print(M[2,1]) #Access information using [R,C]
+
+#Arrays (n-D)
+a <- array(c('green','yellow'),dim = c(3,3,2)) #creates a 3x3x2 tensor and fills it with data in vector
+print(a[1,1,2]) #access individual elements from a tensor
+
+#Factors: stores the vector along with the distinct values of the elements in t
+
+colour <- c('1','1','2','3','4','4') #must be characters for factor
+factorColour <- factor(colour)
+print(factorColour)
+print(nlevels(factorColour)) #distinct values
 
