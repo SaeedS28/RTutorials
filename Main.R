@@ -15,3 +15,8 @@ print (fruit[c(1,2,3)]) #Access element like MATLAB. Arrays start at 1 :(
 list1 <- list(c(123,456,789), 123.2,sin)
 print(list1[2])
 print(list1[[1]][2]) #2nd element of the first vector
+
+#Matrix
+M <-matrix(c('a','a','b','c','b','a'),nrow=2, ncol=3,byrow=TRUE) #byrow places data based on rows or cols. True for rows, False for cols
+print(M[2,1]) #Access information using [R,C]
+
