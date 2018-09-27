@@ -8,5 +8,10 @@ print(class(n)) #Fetches the class the valiable belongs to
 
 #vector
 fruit <- c("apple", "pear", "banana") #vector with more than one entry
-print (fruit[1]) #Access element, arrays start at 1 :(
-print(class(fruit))
+print (fruit[c(1,2,3)]) #Access element like MATLAB. Arrays start at 1 :(
+#print(class(fruit))
+
+#List
+list1 <- list(c(123,456,789), 123.2,sin)
+print(list1[2])
+print(list1[[1]][2]) #2nd element of the first vector
