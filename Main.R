@@ -31,3 +31,14 @@ factorColour <- factor(colour)
 print(factorColour)
 print(nlevels(factorColour)) #distinct values
 
+#data frames:  tabular data objects. Unlike a matrix in data frame each column can contain different modes of data
+BMI <- data.frame( #row names are headers.
+  gender = c("Male", "Male","Female"),
+  height = c(152, 171.5, 165),  
+  weight = c(81,93, 78), 
+  Age =c(42,38,26) 
+) 
+#names, nrow, ncol, length are methods called on daa frame
+print(BMI) 
+print(BMI[1,2]) #Like a matrix
+print(BMI[1:2,]) #gets 1st and 2nd rows
